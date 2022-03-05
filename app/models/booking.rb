@@ -1,9 +1,9 @@
 class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :toilet
-  has_many :review
+  has_many :reviews
 
-  validate :end_date_is_after_start_date?
+  validates :end_date_is_after_start_date?
   validates :from_date, :to_date, presence: true
 
   private
