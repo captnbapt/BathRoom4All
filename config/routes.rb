@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
-  resources :bathrooms do
-    collection do
-      get :my_bathrooms
-    end
-    resources :bookings, only: %i[create show]
-  end
+  resources :toilets
+  get 'my_toilets', to:'toilets#my_toilets'
+  resources :bookings, only: %i[create show]
   devise_for :users
   resources :bookings, only: %i[index]
   root to: 'pages#home'

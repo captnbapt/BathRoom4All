@@ -20,6 +20,10 @@ before_action :set_toilet_id, only: [:show, :edit, :update, :destroy]
     @toilet.save
   end
 
+  def my_toilets
+    @toilets = Toilet.where(user: current_user)
+  end
+
   private
 
   def toilet_params
