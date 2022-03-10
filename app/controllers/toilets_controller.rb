@@ -6,7 +6,7 @@ before_action :set_toilet_id, only: [:show, :edit, :update, :destroy]
   end
 
   def show
-≈ end
+  end
 
   def new
     @toilet = Toilet.new
