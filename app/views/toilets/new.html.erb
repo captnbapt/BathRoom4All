@@ -1,0 +1,20 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Reference your toilet</h3>
+        <%= simple_form_for @toilet do |f| %>
+          <%= f.input :address, placeholder: 'Add description' %>
+          <%= f.input :description, placeholder: 'Add description' %>
+          <%# <div class= "form-check-inline"> %>
+            <%= f.input :toilets_option, as: :boolean, checked_value: true, unchecked_value: false %>
+            <%= f.input :shower_option, as: :boolean, checked_value: true, unchecked_value: false %>
+            <%= f.input :baby_changing_table_option, as: :boolean, checked_value: true, unchecked_value: false %>
+          <%#    %>
+          <%= f.submit class: 'btn btn-success btn-s' %>
+        <% end %>
+        <%= link_to "Back to list of toilets", toilets_path %>
+      </div>
+    </div>
+  </div>
+</div>

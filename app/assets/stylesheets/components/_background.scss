@@ -1,0 +1,17 @@
+.background {
+  background-image: url("https://res.cloudinary.com/daol2k792/image/upload/v1645892214/dont_panic_jidla2.jpg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+.content-center {
+  height: 100%;
+  background-color: #FEE3EC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}

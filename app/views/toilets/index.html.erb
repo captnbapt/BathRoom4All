@@ -1,1 +1,40 @@
-<p>Index</p>
+<div class="content-center">
+  <h1>Fulfill world basic Maslow's need, one toilet at a time</h1>
+  <%= link_to 'Be part of the community', new_toilet_path, class: 'btn btn-outline-success' %>
+</div>
+<div class="background">
+  <div class="card-deck" style="padding: 5%">
+    <% @toilets.each do |toilet| %>
+      <div class="card" style="margin: 5%">
+        <%= cl_image_tag("pink_toilet_mhunfc", class: "card-img-top")%>
+        <%# <img class = "card-img-top" src="https://via.placeholder.com/250" alt=""> %>
+        <div class="card-body">
+          <h5 class="card-title"><%= toilet.id %></h5>
+          <p class="card-text"><%= toilet.description %></p>
+          <a href="#" class="btn btn-light">BOOK IT !</a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<!--
+  <div class="cards-bath">
+    <% @toilets.each do |toilet| %>
+      <div class="card-bath">
+        <div class="row">
+        <%# <img src="https://via.placeholder.com/250" alt=""> %>
+          <%= cl_image_tag("pink_toilet_mhunfc")%>
+        </div>
+        <div class="row">
+          <div class="card-bath-infos">
+            <h5 class="card-title"><%= toilet.id %></h5>
+            <p class="card-text"><%= toilet.description %></p>
+          </div>
+        </div>
+        <div id="button">
+          <a href="#" class="btn btn-light btn-lg">BOOK IT !</a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+-->
